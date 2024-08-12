@@ -1,4 +1,4 @@
-import {API_URL} from "../src/app/(home)/page"
+import { API_URL } from "@/app/(movies)/movies/contant";
 import styles from "../styles/movie-videos.module.css"
  
 async function getVideos(id: string) {
@@ -16,13 +16,14 @@ export default async function MovieVideos({id} : {id: string}) {
   //return <h6>{JSON.stringify(videos)}</h6>
   return (
     <div className={styles.container}>
-      {videos.map((video) => ( 
-        <iframe 
-        key={video.id} 
-        src={`https://youtube.com/embed/${video.key}`} 
-        allow="acclerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title={video.name}/>
+      {videos.map((video:any) => (
+        <iframe
+          key={video.id}
+          src={`https://youtube.com/embed/${video.key}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title={video.name}
+        />
       ))}
     </div>
   );

@@ -1,7 +1,6 @@
-import "../styles/global.css"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../../styles/global.css";
 import Navigation from "../../components/navigation";
 // import AboutUs from "./about-us/page";
 // import AboutUsLayout from "./about-us/layout";
